@@ -5,6 +5,7 @@ import (
 
 	"github.com/aryan/go-dsa/Array"
 	"github.com/aryan/go-dsa/LinkedList"
+	"github.com/aryan/go-dsa/Trees"
 )
 
 func main() {
@@ -23,4 +24,17 @@ func main() {
 	list.Insert(5)
 
 	list.Display()
+
+	//for Binary Trees
+	node1 := &Trees.TreeNode{Val: 1}
+	node2 := &Trees.TreeNode{Val: 2}
+	node3 := &Trees.TreeNode{Val: 3}
+
+	node1.Left = node2
+	node1.Right = node3
+
+	root := node1
+	bt := Trees.BinaryTree{Root: node1}
+
+	bt.PreOrderTraversal(root)
 }
